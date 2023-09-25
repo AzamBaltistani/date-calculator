@@ -194,6 +194,8 @@ const DatePredictorApp = () => {
               {format}
             </span>
           </h1>
+          <br/>
+          <br/>
           <h1 className="">
             Today:{" "}
             <span className="rounded-full border border-gray-300 bg-sky-100 p-2 px-5">
