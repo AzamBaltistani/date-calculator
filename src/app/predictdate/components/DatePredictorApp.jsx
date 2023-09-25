@@ -82,7 +82,7 @@ const DatePredictorApp = () => {
           <div className=" w-full rounded-r-full bg-sky-100 p-2 py-3">
             Multiple / Steps
             <br />
-            <span className="text-sm text-gray-500">
+            <span className="text-sm text-gray-500 hidden md:block">
               (* mouse wheel, * arrows)
             </span>
           </div>
@@ -131,7 +131,7 @@ const DatePredictorApp = () => {
           <div className="w-full rounded-r-full bg-sky-100 p-2 py-3">
             Days
             <br />
-            <span className="text-sm text-gray-500">
+            <span className="text-sm text-gray-500 hidden md:block">
               (* custom input, * mouse wheel [click for reverse], * arrows)
             </span>
           </div>
