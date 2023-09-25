@@ -9,7 +9,7 @@ export default function Home() {
         <h1 className="text-xl font-semibold">Its all open sourse!</h1>
         <h2 className="text-sm font-light">Please contribute on GitHub</h2>
         <Link
-          href={"#"}
+          href={"https://github.com/AzamBaltistani/date-calculator.git"}
           className="m-2 h-auto w-auto rounded-full border p-2 hover:border-green-300"
         >
           <AiFillGithub size={30} />
@@ -19,7 +19,7 @@ export default function Home() {
         <h1>Follow me</h1>
         <div className="flex h-auto w-auto p-2">
           <Link
-            href={"#"}
+            href={"https://github.com/AzamBaltistani/"}
             className="m-2 h-auto w-auto rounded-full border p-2 hover:border-gray-300"
           >
             <AiFillGithub size={20} />
