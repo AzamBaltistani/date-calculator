@@ -77,7 +77,56 @@ const DatePredictorApp = () => {
 
   return (
     <div className="mt-4 flex flex-col p-0 sm:p-6 md:p-8 lg:p-10">
-     
+     <div className="flex h-full w-full items-center justify-center rounded-md border border-gray-300 bg-white shadow ">
+        <div className="flex h-full w-full items-center justify-between pr-1">
+          <div className=" w-full rounded-r-full bg-sky-100 p-2 py-3">
+            Multiple / Steps
+            <br />
+            <span className="text-sm text-gray-500 hidden md:block">
+              (* mouse wheel, * arrows)
+            </span>
+          </div>
+          <div className="flex">
+            <div
+              className="flex w-16 flex-col items-center justify-between p-2"
+              onWheel={handleMultWheel}
+            >
+              <p className="text-sm font-extralight text-gray-400 text-opacity-50 ">
+                {multi > 2 ? multi - 2 : "X"}
+              </p>
+              <p className="text-sm text-gray-500 text-opacity-50">
+                {multi > 1 ? multi - 1 : "X"}
+              </p>
+              <p className="py-2">{multi}</p>
+              <p className="text-sm text-gray-500 text-opacity-50">
+                {multi + 1}
+              </p>
+              <p className="text-sm font-extralight text-gray-400 text-opacity-50">
+                {multi + 2}
+              </p>
+            </div>
+            <div className="flex flex-col justify-between bg-gray-100 transition-all">
+              <button
+                className=" bg-opacity-50 p-2 transition-all hover:bg-sky-300"
+                onClick={handleMultMinuBtn}
+              >
+                <AiFillCaretUp />
+              </button>
+              <button
+                className=" bg-opacity-50 p-2 transition-all hover:bg-sky-300"
+                onClick={handleMultResetBtn}
+              >
+                <RxCross2 />
+              </button>
+              <button
+                className=" bg-opacity-50 p-2 transition-all hover:bg-sky-300"
+                onClick={handleMultPlusBtn}
+              >
+                <AiFillCaretDown />
+              </button>
+            </div>
+          </div>
+        </div>
         <div className="flex h-full w-full items-center justify-between border-l border-gray-300 pr-1">
           <div className="w-full rounded-r-full bg-sky-100 p-2 py-3">
             Days
@@ -154,56 +203,7 @@ const DatePredictorApp = () => {
             </span>
           </h1>
         </div>
-           <div className="flex h-full w-full items-center justify-center rounded-md border border-gray-300 bg-white shadow ">
-        <div className="flex h-full w-full items-center justify-between pr-1">
-          <div className=" w-full rounded-r-full bg-sky-100 p-2 py-3">
-            Multiple / Steps
-            <br />
-            <span className="text-sm text-gray-500 hidden md:block">
-              (* mouse wheel, * arrows)
-            </span>
-          </div>
-          <div className="flex">
-            <div
-              className="flex w-16 flex-col items-center justify-between p-2"
-              onWheel={handleMultWheel}
-            >
-              <p className="text-sm font-extralight text-gray-400 text-opacity-50 ">
-                {multi > 2 ? multi - 2 : "X"}
-              </p>
-              <p className="text-sm text-gray-500 text-opacity-50">
-                {multi > 1 ? multi - 1 : "X"}
-              </p>
-              <p className="py-2">{multi}</p>
-              <p className="text-sm text-gray-500 text-opacity-50">
-                {multi + 1}
-              </p>
-              <p className="text-sm font-extralight text-gray-400 text-opacity-50">
-                {multi + 2}
-              </p>
-            </div>
-            <div className="flex flex-col justify-between bg-gray-100 transition-all">
-              <button
-                className=" bg-opacity-50 p-2 transition-all hover:bg-sky-300"
-                onClick={handleMultMinuBtn}
-              >
-                <AiFillCaretUp />
-              </button>
-              <button
-                className=" bg-opacity-50 p-2 transition-all hover:bg-sky-300"
-                onClick={handleMultResetBtn}
-              >
-                <RxCross2 />
-              </button>
-              <button
-                className=" bg-opacity-50 p-2 transition-all hover:bg-sky-300"
-                onClick={handleMultPlusBtn}
-              >
-                <AiFillCaretDown />
-              </button>
-            </div>
-          </div>
-        </div>
+           
       </div>
 
       <p className="m-2 mt-10 rounded bg-orange-100 p-2 text-center">
